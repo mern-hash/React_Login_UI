@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap'
+import {Navbar, Nav, Button} from 'react-bootstrap'
 import {
     Link, useHistory
 } from "react-router-dom";
@@ -25,17 +25,26 @@ export default function UserHeader() {
 
     return (
         <div>
+            <div className="background_navbar">
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#">User DashBoard</Navbar.Brand>
-                <Nav className="me-auto nav_bar_wrapper">
+                <div className="container">
+                    <div className="heaser_logo">
+                        <Navbar.Brand href="#">User DashBoard</Navbar.Brand>
+                    </div>
+                <Nav className="nav_bar_wrapper">
                     <Nav><Link to={{ pathname: `/profile/${id}` }} className="userheader">Profile</Link></Nav>
                     <Nav><Link to={{ pathname: `/resetpassword/${id}` }} className="userheader">Rest Password</Link></Nav>
                     <Nav><Link to={{ pathname: `/single/${id}` }} className="userheader">Update</Link></Nav>
-                    <Nav><span onClick={logout} className="userheader">LogOut</span></Nav>
+                    {/*<Nav><span onClick={logout} className="userheader">LogOut</span></Nav>*/}
                 </Nav>
-                <Nav>
-                </Nav>
+                    <div className="header_btn">
+                        <Button variant="outline-primary" size="lg" className="login-register-btn login_header" onClick={logout} >
+                        Logout
+                        </Button>
+                    </div>
+                </div>
             </Navbar>
+            </div>
         </div>
     )
 };

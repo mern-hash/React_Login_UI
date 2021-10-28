@@ -16,15 +16,22 @@ export default function UserList() {
 
     const [data, setData] = useState([]),
         [msg, updateMsg] = useState("");
-    useEffect(async () => {
-        let result = await fetch(`${APIURL}/list`, {
-            headers: {
-                'Authorization': `Bearer ${brearer}`,
-            },
-        });
-        result = await result.json();
-        setData(result)
+    useEffect(() => {
+         async function fetchMyAPI() {
+            try{
+                let result = await fetch(`${APIURL}/list`, {
+                    headers: {
+                        'Authorization': `Bearer ${brearer}`,
+                    },
+                });
+                result = await result.json();
+                setData(result)
+            }catch(e){
+                console.error(e);
+            }
 
+        }
+        fetchMyAPI();
     }, [])
 
     const onEdit = (id) => {
@@ -56,7 +63,10 @@ export default function UserList() {
     }
     return (
         <div>
+        <div>
             <Header />
+        </div>
+            <div className="user_top_bar">
             <div className="container">
                 <div className="row search_bar">
                     <div className="col-md-3">
@@ -82,7 +92,7 @@ export default function UserList() {
                 </div>
             </div>
             <span>{msg}</span>
-
+            </div>
             <div className="container">
                 <div className="row">
                     <div className="col-12">

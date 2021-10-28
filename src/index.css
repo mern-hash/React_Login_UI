@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -18,7 +19,7 @@ code {
 }
 
 .formwrapper {
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   box-shadow: inset 0 -3em 3em rgb(0 0 0 / 10%), 0 0 0 2px rgb(255 255 255), 0.3em 0.3em 1em rgb(0 0 0 / 30%);
 }
 .btn.btn-primary {
@@ -121,7 +122,9 @@ span.userheader {
   box-shadow: none !important; 
 }
 
-
+.profile{
+  margin-top: 75px;
+}
 @media only screen and (max-width: 600px){
 
   .login-register-btn {
@@ -290,5 +293,214 @@ span.userheader {
   font-weight: 600;
 }
 
+/*---------------Login_CSS-----------------*/
 
+.login {
+  background: #7895fa;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.login_field {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.login_gif {
+  background: #eff3fe;
+}
+.login_field_inner {
+  padding: 60px 90px 110px 90px;
+  width: 100%;
+}
+.login_field_inner input[type="email"] {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.login_field_inner input[type="password"]{
+  padding: 10px 15px;
+  /*margin-bottom: 20px;*/
+}
+.login_field_inner button.btn {
+  padding: 10px 15px;
+}
+.login_gif_inner {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.login_gif_inner img {
+  width: 100%;
+}
+.login_field_inner .forgetpassword{
+  float: right;
+}
+.login_field_inner p.register {
+  text-align: center;
+  padding-top: 15px;
+}
 
+/*--------------Register_CSS----------*/
+
+.register_form{
+  background: #7895fa;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.register_field {
+  background: #ffffff;
+}
+.register_field_inner input.form-control {
+  padding: 10px 15px;
+}
+.register_field_inner select {
+  padding: 10px 15px;
+  margin-top: 10px;
+}
+.register_field_inner {
+  padding: 40px 20px;
+}
+.register_field_inner button.btn {
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+.register_gif_inner img {
+  width: 100%;
+}
+.register_gif {
+  background: #eff3fe;
+}
+.register_gif_inner {
+  text-align: center;
+}
+.register_gif_inner h1 {
+  padding-top: 20px;
+}
+
+/*---------header_CSS-----------*/
+
+.header_btn .login_header {
+  border-radius: 50px;
+  margin-right: 10px;
+  background: #7895fa;
+  border: 1px solid #7895fa;
+  width: 160px;
+}
+.header_btn .login_header a{
+  color: #ffffff !important;
+}
+.header_btn .register_header {
+  border-radius: 50px;
+  margin-right: 10px;
+  border: 1px solid #7895fa;
+  width: 160px;
+}
+.header_btn .register_header a {
+  color: #7895fa !important;
+  text-transform: uppercase;
+}
+.header_btn .register_header a:hover, .header_btn .register_header:hover a  {
+  color: #ffffff !important;
+}
+nav.navbar .navbar-nav > .navbar-nav a{
+  color: #7895fa !important;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 55px;
+}
+nav.navbar .navbar-nav > .navbar-nav span{
+  color: #7895fa !important;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 25px;
+  display: block;
+}
+nav.navbar .heaser_logo > span.navbar-brand {
+  color: #7895fa;
+  font-size: 40px;
+  font-weight: 600;
+}
+nav.navbar {
+  background: transparent !important;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.App-header.home_banner {
+  /*background: #7895fa;*/
+  display: block;
+}
+.home_gif{
+  background-image: url("Home_back_img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.home_gif .home_contant h1{
+  color: #7895fa;
+  margin-bottom: 20px;
+}
+.home_gif .home_contant p{
+  color: #848484;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+button.header_inner_btn{
+  border-radius: 50px;
+  background: #7895fa;
+  border: 1px solid #7895fa;
+  padding: 10px 40px;
+}
+button.header_inner_btn a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.user_top_bar{
+  margin-top: 80px;
+}
+.background_navbar nav.navbar {
+  background: #7895fa !important;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.background_navbar nav.navbar .heaser_logo > span.navbar-brand {
+  color: #eaeaea;
+  font-size: 40px;
+  font-weight: 600;
+}
+.background_navbar nav.navbar .navbar-nav > .navbar-nav a {
+  color: #f6f6f6 !important;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 35px;
+}
+.background_navbar nav.navbar .navbar-nav > .navbar-nav span {
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 25px;
+  display: block;
+}
+.background_navbar .header_btn .login_header {
+  border-radius: 50px;
+  margin-right: 10px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  width: 160px;
+  color: cornflowerblue;
+}
+.background_navbar .header_btn .login_header a {
+  color: #7895fa !important;
+}
+.background_navbar nav.navbar .heaser_logo > a.navbar-brand {
+  color: #eaeaea;
+  font-size: 40px;
+  font-weight: 600;
+}
+.Toastify__toast--success {
+  background: #7895fa !important;
+}

@@ -47,7 +47,7 @@ export default function Login() {
                     localStorage.setItem("user-info", JSON.stringify(response))
                     Cookies.set("user-info", JSON.stringify(response))
                     toast.success("Login Successfully")
-                    history.push("/userheader")
+                    history.push("/userdashboard")
                 }
                 else if (data['userType'] === "admin") {
                     localStorage.setItem("user-info", JSON.stringify(response))
@@ -71,20 +71,33 @@ export default function Login() {
         }
     }
     return (
-        <div className="container pt-5">
-            <div className="row myrow d-flex justify-content-center align-items-center;">
-                <div className="col-lg-8 col-sm-12 formwrapper" >
-                    <h1 className="pt-3 pb-3 text-center">Login</h1>
+        <div className="login">
+        <div className="container">
+            <div className="row d-flex justify-content-center align-items-center;">
+                <div className="col-lg-10 col-sm-12 formwrapper" >
+                    <div className="row">
+                        <div className="col-lg-6 col-sm-12 login_field" >
+                            <div className="login_field_inner">
+                                <h1 className="pt-3 pb-3">Login</h1>
+                                <label>Email Address</label>
+                                <input type="email" name="email" value={values.email} onChange={handleChange} placeholder="Enter Email" className="form-control" />{errors.email && <p className="error">{errors.email}</p>}
+                                <label>Password</label>
+                                <input type="password" name="password" value={values.password} onChange={handleChange} placeholder="Enter Password" className="form-control" />{errors.password && <p className="error">{errors.password}</p>}
+                                <p className="forgetpassword" ><Link to={'/forgetpassword'}>Forget Password ?</Link></p>
+                                <button className="btn btn-primary" onClick={handleFormSubmit}>Login</button>
+                                <p className="register" >Don't have an account?<Link to={'/register'}>Sign up</Link></p>
 
-                    <input type="email" name="email" value={values.email} onChange={handleChange} placeholder="Enter Email" className="form-control" />{errors.email && <p className="error">{errors.email}</p>}
-                    <input type="password" name="password" value={values.password} onChange={handleChange} placeholder="Enter Password" className="form-control" />{errors.password && <p className="error">{errors.password}</p>}
-
-                    <button className="btn btn-primary" onClick={handleFormSubmit}>Login</button>
-                    <p className="md54" ><Link to={'/register'}>Register Now </Link></p>
-
-                    <p className="md7" ><Link to={'/forgetpassword'}>Forget Password ?</Link></p>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-sm-12 login_gif" >
+                            <div className="login_gif_inner">
+                                <img src="animation_1st.gif" alt="business-analyst" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 };

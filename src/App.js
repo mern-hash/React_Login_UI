@@ -18,12 +18,12 @@ import Home from './Component/Home';
 import Register from './Component/Register';
 import Landing from './Component/Landing';
 import Login from './Component/Login';
-import UserHeader from './Component/User/UserHeader';
 import Profile from './Component/User/Profile';
 import Forgetpass from './Component/Forgetpass';
 import Changepass  from  './Component/Changepass';
 import Resetpass  from  './Component/User/Resetpass';
 import SingleU from './Component/User/SingleU';
+import UserDashboard from "./Component/User/Dashboard";
 
 export default function App() {
   return (
@@ -72,8 +72,8 @@ export default function App() {
         <Route path="/single/:id">
         < Protected Cmp={SingleU} />
         </Route>
-        <Route path="/userheader">
-        <UserHeader/>
+        <Route path="/userdashboard">
+        <UserDashboard/>
      </Route>
       </Switch>
       <ToastContainer autoClose={2000}  />
